@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.3-alpha.0...v0.1.4-alpha.0) (2025-10-03)
+
+
+### Bug Fixes
+
+* ok, lets try to build a docker image (again) ([78cd8d5](https://github.com/jzandbergen/go-release-please-test/commit/78cd8d5e98fa07c3fdc378b144d109f943bc49c7))
+
 ## [0.1.3-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.2-alpha.0...v0.1.3-alpha.0) (2025-10-03)
 
 
