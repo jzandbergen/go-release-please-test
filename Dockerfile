@@ -1,10 +1,13 @@
-FROM golang:1.25-alpine AS builder
+FROM docker.io/golang:1.25-alpine AS builder
 
 WORKDIR /app
-COPY go.mod ./
+COPY . .
 RUN go mod download
 
-COPY . .
+# Perform a security scan
+RUN go install golang.org/x/vuln/cmd/govulncheck@latest
+RUN govulncheck ./...
+
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
 FROM alpine:latest
@@ -14,3 +17,4 @@ WORKDIR /root/
 COPY --from=builder /app/main .
 
 CMD ["./main"]
+
