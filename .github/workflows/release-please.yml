@@ -18,7 +18,6 @@ jobs:
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          release-type: go
       
       # Build and upload Go binaries if a release was created
       - uses: actions/checkout@v4
