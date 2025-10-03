@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.6-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.5-alpha.0...v0.1.6-alpha.0) (2025-10-03)
+
+
+### Features
+
+* introduce a security issue ([938171b](https://github.com/jzandbergen/go-release-please-test/commit/938171b9bcc4f046cf8c8cbca083d8d37920538e))
+
+
+### Bug Fixes
+
+* remove cruft ([c3a38f6](https://github.com/jzandbergen/go-release-please-test/commit/c3a38f60d29a46c82e8a823beeb64936a8abb05b))
+
 ## [0.1.5-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.4-alpha.0...v0.1.5-alpha.0) (2025-10-03)
 
 
