@@ -1,20 +1,23 @@
 FROM docker.io/golang:1.25-alpine AS builder
 
+RUN apk update --no-cache && \
+  apk add curl && \
+  curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin latest
+
+
 WORKDIR /app
 COPY . .
+
+RUN trivy fs --exit-code 1 --severity HIGH,CRITICAL --no-progress /
+
 RUN go mod download
-
-# Perform a security scan
-RUN go install golang.org/x/vuln/cmd/govulncheck@latest
-RUN govulncheck ./...
-
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
-FROM alpine:latest
+# Final stage
+FROM docker.io/alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 COPY --from=builder /app/main .
 
 CMD ["./main"]
-
