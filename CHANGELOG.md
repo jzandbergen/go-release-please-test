@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.4-alpha.0...v0.1.5-alpha.0) (2025-10-03)
+
+
+### Bug Fixes
+
+* do not use latest tag on docker images ([f309bbb](https://github.com/jzandbergen/go-release-please-test/commit/f309bbbddb7a394eef6e88befc998a7a6484bac8))
+
 ## [0.1.4-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.3-alpha.0...v0.1.4-alpha.0) (2025-10-03)
 
 
