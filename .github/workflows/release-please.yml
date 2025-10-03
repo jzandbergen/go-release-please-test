@@ -17,7 +17,6 @@ jobs:
         id: release
         with:
           release-type: go
-          package-name: go-release-please-test
       
       # Build and upload Go binaries if a release was created
       - uses: actions/checkout@v4
