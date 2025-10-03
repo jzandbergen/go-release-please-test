@@ -3,6 +3,7 @@
   "separate-pull-requests": false,
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
+  "pre-release": true,
   "pre-release-type": "alpha",
   "changelog-sections": [
     {"type": "feat", "section": "Features"},
