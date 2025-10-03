@@ -1,0 +1,23 @@
+{
+  "release-type": "go",
+  "separate-pull-requests": false,
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "pre-release-type": "alpha",
+  "changelog-sections": [
+    {"type": "feat", "section": "Features"},
+    {"type": "fix", "section": "Bug Fixes"},
+    {"type": "perf", "section": "Performance Improvements"},
+    {"type": "deps", "section": "Dependencies"},
+    {"type": "chore", "section": "Miscellaneous", "hidden": true}
+  ],
+  "pull-request-title-pattern": "chore: release ${version}",
+  "pull-request-header": ":robot: I have created a release *beep* *boop*",
+  "extra-files": [
+    {
+      "type": "go",
+      "path": "README.md",
+      "glob": true
+    }
+  ]
+}
