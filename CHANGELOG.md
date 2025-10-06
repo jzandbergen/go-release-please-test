@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.6-alpha.0...v0.1.7-alpha.0) (2025-10-06)
+
+
+### Features
+
+* new feature ([634d2c1](https://github.com/jzandbergen/go-release-please-test/commit/634d2c1a7e9f6b38ef10e6433c1b14484f79e617))
+
 ## [0.1.6-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.5-alpha.0...v0.1.6-alpha.0) (2025-10-03)
 
 
