@@ -19,6 +19,15 @@ jobs:
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+
+      - name: Docker meta
+        id: meta
+        if: ${{ steps.release.outputs.release_created }}
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+          flavor: |
+            latest=false
       
       # Build and push Docker image if a release was created
       - uses: actions/checkout@v4
@@ -42,5 +51,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ steps.release.outputs.tag_name }}
+          tags: ghcr.io/${{ github.repository }}:${{ steps.meta.outputs.tags }}
           platforms: linux/amd64
