@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8-alpha.1](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.7-alpha.1...v0.1.8-alpha.1) (2025-10-06)
+
+
+### Bug Fixes
+
+* remove security issue ([17f1d6e](https://github.com/jzandbergen/go-release-please-test/commit/17f1d6eb79e332c412b22088acba0fe2a1dcf6c8))
+
 ## [0.1.7-alpha.1](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.7-alpha.0...v0.1.7-alpha.1) (2025-10-06)
 
 
