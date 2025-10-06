@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7-alpha.1](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.7-alpha.0...v0.1.7-alpha.1) (2025-10-06)
+
+
+### ci
+
+* also listen on tags ([192bbb8](https://github.com/jzandbergen/go-release-please-test/commit/192bbb89fb343fb5770c1d92903204f0de051684))
+
 ## [0.1.7-alpha.0](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.6-alpha.0...v0.1.7-alpha.0) (2025-10-06)
 
 
