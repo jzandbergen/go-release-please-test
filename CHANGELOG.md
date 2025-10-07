@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.18-alpha.2](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.8-alpha.1...v0.1.18-alpha.2) (2025-10-07)
+
+
+### ci
+
+* stuff ([5257d53](https://github.com/jzandbergen/go-release-please-test/commit/5257d53a04358c6a731fb3167a85112a551f96cf))
+
 ## [0.1.8-alpha.1](https://github.com/jzandbergen/go-release-please-test/compare/v0.1.7-alpha.1...v0.1.8-alpha.1) (2025-10-06)
 
 
