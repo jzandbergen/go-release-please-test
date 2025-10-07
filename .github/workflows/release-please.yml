@@ -22,23 +22,22 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
+      # Build and push Docker image if a release was created
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          fetch-depth: ${{ github.event_name == 'pull_request' && 1 || 2 }}
+          ref: ${{ steps.release.outputs.tag_name }}
+      
       - name: Docker meta
         id: meta
         if: ${{ steps.release.outputs.release_created }}
         uses: docker/metadata-action@v5
         with:
+          context: git
           images: ghcr.io/${{ github.repository }}
           flavor: |
             latest=false
-          tags: |
-            type=schedule,pattern=nightly,enable=true,priority=1000
-            type=ref,event=tag,enable=true,priority=800
-            type=ref,event=branch,enable=true,priority=600
-            type=ref,event=pr,prefix=pr-,enable=true,priority=600
-      
-      # Build and push Docker image if a release was created
-      - uses: actions/checkout@v4
-        if: ${{ steps.release.outputs.release_created }}
       
       - name: Set up Docker Buildx
         if: ${{ steps.release.outputs.release_created }}
